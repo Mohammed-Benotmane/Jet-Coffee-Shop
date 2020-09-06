@@ -66,6 +66,9 @@ flutter:
     - family: Raleway
       fonts:
         - asset: fonts/Raleway-Medium.ttf
+    - family:  MyFlutterApp
+      fonts:
+        - asset: fonts/MyFlutterApp.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
