@@ -1,6 +1,7 @@
 import 'package:coffeshopapp/const.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class LoginForm extends StatefulWidget {
   @override
@@ -26,15 +27,27 @@ class _LoginFormState extends State<LoginForm> {
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30, 120, 30, 30),
+        padding: const EdgeInsets.fromLTRB(30, 80, 30, 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             Expanded(
               flex: 2,
-              child: Text(
-                "Welcome back!",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Center(
+                    child: SvgPicture.asset(
+                      "assets/coffee.svg",
+                      height: MediaQuery.of(context).size.height/5,
+                    ),
+                  ),
+                  SizedBox(height: 15),
+                  Text(
+                    "Welcome back!",
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
+                  ),
+                ],
               ),
             ),
             Expanded(
@@ -79,7 +92,7 @@ class _LoginFormState extends State<LoginForm> {
                     children: <Widget>[
                       Text(
                         "Forgot password?",
-                        style: TextStyle(color: darkBrown,fontWeight: FontWeight.w500),
+                        style: TextStyle(color: darkBrown, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
@@ -107,11 +120,10 @@ class _LoginFormState extends State<LoginForm> {
                       Text("Don\'t have an account?", style: TextStyle(color: Colors.grey.shade600)),
                       Text(
                         " Register",
-                        style: TextStyle(color: darkBrown,fontWeight: FontWeight.w500),
+                        style: TextStyle(color: darkBrown, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
-
                 ],
               ),
             ),
