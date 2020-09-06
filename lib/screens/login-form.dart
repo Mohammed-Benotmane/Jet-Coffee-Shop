@@ -14,35 +14,106 @@ class _LoginFormState extends State<LoginForm> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        leading: Icon(Icons.keyboard_arrow_left,color: Colors.brown,),
+        leading: Icon(
+          Icons.keyboard_arrow_left,
+          color: Colors.brown,
+        ),
         backgroundColor: Colors.white,
-        title: Text("Login",style: TextStyle(color: Colors.brown),),
+        title: Text(
+          "Login",
+          style: TextStyle(color: Colors.brown),
+        ),
         centerTitle: true,
       ),
       body: Padding(
-        padding: const EdgeInsets.fromLTRB(30,80,30,30),
+        padding: const EdgeInsets.fromLTRB(30, 120, 30, 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
-              "Welcome back!",
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
-            ),
-            SizedBox(height: 30),
-            Text("Email",style: TextStyle(color: darkBrown)),
-            TextField(
-              decoration: InputDecoration(
-                enabledBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: darkBrown),
-                ),
-                focusedBorder: UnderlineInputBorder(
-                  borderSide: BorderSide(color: darkBrown),
-                ),
-                border: UnderlineInputBorder(
-                  borderSide: BorderSide(color: darkBrown),
-                ),
+            Expanded(
+              flex: 2,
+              child: Text(
+                "Welcome back!",
+                style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
               ),
-              cursorColor: darkBrown,
+            ),
+            Expanded(
+              flex: 3,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Text("Email", style: TextStyle(color: Colors.grey.shade600)),
+                  TextField(
+                    decoration: InputDecoration(
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey.shade400),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBrown),
+                      ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBrown),
+                      ),
+                    ),
+                    cursorColor: darkBrown,
+                  ),
+                  SizedBox(height: 50),
+                  Text("Password", style: TextStyle(color: Colors.grey.shade600)),
+                  TextField(
+                    decoration: InputDecoration(
+                      enabledBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: Colors.grey.shade400),
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBrown),
+                      ),
+                      border: UnderlineInputBorder(
+                        borderSide: BorderSide(color: darkBrown),
+                      ),
+                    ),
+                    cursorColor: darkBrown,
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Text(
+                        "Forgot password?",
+                        style: TextStyle(color: darkBrown,fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 50),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: <Widget>[
+                      ClipRRect(
+                          borderRadius: BorderRadius.circular(25),
+                          child: FlatButton(
+                            padding: EdgeInsets.fromLTRB(55, 15, 55, 15),
+                            onPressed: () {},
+                            child: Text(
+                              "Log In",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            color: darkBrown,
+                          )),
+                    ],
+                  ),
+                  SizedBox(height: 15),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: <Widget>[
+                      Text("Don\'t have an account?", style: TextStyle(color: Colors.grey.shade600)),
+                      Text(
+                        " Register",
+                        style: TextStyle(color: darkBrown,fontWeight: FontWeight.w500),
+                      ),
+                    ],
+                  ),
+
+                ],
+              ),
             ),
           ],
         ),
