@@ -1,4 +1,5 @@
 import 'package:coffeshopapp/const.dart';
+import 'package:coffeshopapp/screens/login-form.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -67,7 +68,11 @@ class _LoginState extends State<Login> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: OutlineButton.icon(
               padding: EdgeInsets.fromLTRB(60, 15, 60, 15),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context){
+                  return LoginForm();
+                }));
+              },
               icon: FaIcon(FontAwesomeIcons.facebookF, size: 20, color: facebookColor),
               label: Text(
                 "Connect with Facebook",
