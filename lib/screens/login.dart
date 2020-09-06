@@ -43,7 +43,11 @@ class _LoginState extends State<Login> {
                     borderRadius: BorderRadius.circular(25),
                     child: FlatButton(
                       padding: EdgeInsets.fromLTRB(55, 15, 55, 15),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(builder: (context){
+                          return LoginForm();
+                        }));
+                      },
                       child: Text(
                         "Register",
                         style: TextStyle(color: Colors.white),
@@ -52,7 +56,11 @@ class _LoginState extends State<Login> {
                     )),
                 OutlineButton(
                   padding: EdgeInsets.fromLTRB(60, 15, 60, 15),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context, MaterialPageRoute(builder: (context){
+                      return LoginForm();
+                    }));
+                  },
                   child: Text(
                     "Log In",
                     style: TextStyle(color: darkBrown),

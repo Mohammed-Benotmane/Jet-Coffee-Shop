@@ -1,4 +1,5 @@
 import 'package:coffeshopapp/const.dart';
+import 'package:coffeshopapp/screens/menu.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -104,7 +105,11 @@ class _LoginFormState extends State<LoginForm> {
                           borderRadius: BorderRadius.circular(25),
                           child: FlatButton(
                             padding: EdgeInsets.fromLTRB(55, 15, 55, 15),
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(context, MaterialPageRoute(builder: (context){
+                                return Menu();
+                              }));
+                            },
                             child: Text(
                               "Log In",
                               style: TextStyle(color: Colors.white),
