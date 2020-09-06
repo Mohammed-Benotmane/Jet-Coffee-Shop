@@ -30,7 +30,7 @@ class _LoginState extends State<Login> {
           ),
           Text(
             "Get the best coffee in Algeria!",
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
+            style: TextStyle(fontFamily: 'Raleway',fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 70),
@@ -50,7 +50,7 @@ class _LoginState extends State<Login> {
                       },
                       child: Text(
                         "Register",
-                        style: TextStyle(color: Colors.white),
+                        style: TextStyle(fontFamily: 'Raleway',color: Colors.white),
                       ),
                       color: darkBrown,
                     )),
@@ -63,7 +63,7 @@ class _LoginState extends State<Login> {
                   },
                   child: Text(
                     "Log In",
-                    style: TextStyle(color: darkBrown),
+                    style: TextStyle(fontFamily: 'Raleway',color: darkBrown),
                   ),
                   borderSide: BorderSide(color: darkBrown),
                   shape: StadiumBorder(),
@@ -84,7 +84,7 @@ class _LoginState extends State<Login> {
               icon: FaIcon(FontAwesomeIcons.facebookF, size: 20, color: facebookColor),
               label: Text(
                 "Connect with Facebook",
-                style: TextStyle(color: facebookColor),
+                style: TextStyle(fontFamily: 'Raleway',color: facebookColor),
               ),
               borderSide: BorderSide(color: facebookColor),
               shape: StadiumBorder(),

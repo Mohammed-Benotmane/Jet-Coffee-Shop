@@ -23,7 +23,7 @@ class _LoginFormState extends State<LoginForm> {
         backgroundColor: Colors.white,
         title: Text(
           "Login",
-          style: TextStyle(color: Colors.brown),
+          style: TextStyle(fontFamily: 'Raleway',color: Colors.brown),
         ),
         centerTitle: true,
       ),
@@ -46,7 +46,7 @@ class _LoginFormState extends State<LoginForm> {
                   SizedBox(height: 15),
                   Text(
                     "Welcome back!",
-                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
+                    style: TextStyle(fontFamily: 'Raleway',fontSize: 30, fontWeight: FontWeight.w400, color: Colors.brown),
                   ),
                 ],
               ),
@@ -56,7 +56,7 @@ class _LoginFormState extends State<LoginForm> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
-                  Text("Email", style: TextStyle(color: Colors.grey.shade600)),
+                  Text("Email", style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade600)),
                   TextField(
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
@@ -72,7 +72,7 @@ class _LoginFormState extends State<LoginForm> {
                     cursorColor: darkBrown,
                   ),
                   SizedBox(height: 50),
-                  Text("Password", style: TextStyle(color: Colors.grey.shade600)),
+                  Text("Password", style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade600)),
                   TextField(
                     decoration: InputDecoration(
                       enabledBorder: UnderlineInputBorder(
@@ -93,7 +93,7 @@ class _LoginFormState extends State<LoginForm> {
                     children: <Widget>[
                       Text(
                         "Forgot password?",
-                        style: TextStyle(color: darkBrown, fontWeight: FontWeight.w500),
+                        style: TextStyle(fontFamily: 'Raleway',color: darkBrown, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
@@ -112,7 +112,7 @@ class _LoginFormState extends State<LoginForm> {
                             },
                             child: Text(
                               "Log In",
-                              style: TextStyle(color: Colors.white),
+                              style: TextStyle(fontFamily: 'Raleway',color: Colors.white),
                             ),
                             color: darkBrown,
                           )),
@@ -122,10 +122,10 @@ class _LoginFormState extends State<LoginForm> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Text("Don\'t have an account?", style: TextStyle(color: Colors.grey.shade600)),
+                      Text("Don\'t have an account?", style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade600)),
                       Text(
                         " Register",
-                        style: TextStyle(color: darkBrown, fontWeight: FontWeight.w500),
+                        style: TextStyle(fontFamily: 'Raleway',color: darkBrown, fontWeight: FontWeight.w500),
                       ),
                     ],
                   ),
