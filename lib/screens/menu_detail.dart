@@ -53,8 +53,42 @@ class _MenuDetailState extends State<MenuDetail> {
               ),
             ],
           ),
-          Row(
-            children: <Widget>[],
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: <Widget>[
+                    Text(widget.coffee.name,
+                        style:
+                            TextStyle(fontSize: 16, color: Colors.brown.shade800, fontWeight: FontWeight.bold)),
+                    SizedBox(height: 5),
+                    Text(
+                      "${widget.coffee.price} Da",
+                      style: TextStyle(color: brown),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: <Widget>[
+                    Text("1", style: TextStyle(fontSize: 20)),
+                    OutlineButton(
+                      onPressed: () {},
+                      child: Icon(Icons.remove),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(topLeft: Radius.circular(30),bottomLeft: Radius.circular(30))),
+                    ),
+                    SizedBox(width: 7),
+                    OutlineButton(
+                      onPressed: () {},
+                      child: Icon(Icons.add),
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.only(bottomRight: Radius.circular(30),topRight: Radius.circular(30))),
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),
