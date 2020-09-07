@@ -10,10 +10,10 @@ class MenuList extends StatefulWidget {
 
 class _MenuListState extends State<MenuList> {
   List<Coffee> coffees = [
-    Coffee(coffeeIcon: Icon(MyFlutterApp.cup, size: 20, color: facebookColor), name: "Espresso", price: 500),
-    Coffee(coffeeIcon: Icon(MyFlutterApp.beer, size: 20, color: facebookColor), name: "Cappuccino", price: 600),
-    Coffee(coffeeIcon: Icon(MyFlutterApp.coffee_cup, size: 20, color: facebookColor), name: "Macciato", price: 350),
-    Coffee(coffeeIcon: Icon(MyFlutterApp.coffee_mug, size: 20, color: facebookColor), name: "Latte", price: 150),
+    Coffee(coffeeIcon: Icon(MyFlutterApp.cup, size: 20, color: brown), name: "Espresso", price: 500),
+    Coffee(coffeeIcon: Icon(MyFlutterApp.beer, size: 20, color: brown), name: "Cappuccino", price: 600),
+    Coffee(coffeeIcon: Icon(MyFlutterApp.coffee_cup, size: 20, color: brown), name: "Macciato", price: 350),
+    Coffee(coffeeIcon: Icon(MyFlutterApp.coffee_mug, size: 20, color: brown), name: "Latte", price: 150),
   ];
 
   @override
@@ -29,7 +29,7 @@ class _MenuListState extends State<MenuList> {
               return ListTile(
                 title: Text(coffees[index].name),
                 leading: coffees[index].coffeeIcon,
-
+                trailing: Icon(Icons.keyboard_arrow_right),
               );
             },
           ),
