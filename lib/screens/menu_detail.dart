@@ -33,27 +33,14 @@ class _MenuDetailState extends State<MenuDetail> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
-          Stack(
-            fit: StackFit.loose,
-            children: <Widget>[
-              Container(
-                height: MediaQuery.of(context).size.height * .4,
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/empty.jpg"),
-                    fit: BoxFit.fitWidth,
-                  ),
-                ),
-              ),
-              Positioned(
-                child: Icon(widget.coffee.coffeeIcon, size: 80, color: brown),
-                bottom: 0,
-                top: 0,
-                left: 0,
-                right: 0,
-              ),
-            ],
+          SizedBox(height: 20),
+          Container(
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height/4,
+            color: lightBrown,
+            child: Icon(widget.coffee.coffeeIcon, size: 120, color: brown),
           ),
+          SizedBox(height: 20),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
@@ -63,20 +50,21 @@ class _MenuDetailState extends State<MenuDetail> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(widget.coffee.name,
-                        style: TextStyle(
+                        style: TextStyle(fontFamily: 'Raleway',
                             fontSize: 16, color: Colors.brown.shade800, fontWeight: FontWeight.bold)),
                     SizedBox(height: 5),
                     Text(
                       "${widget.coffee.price} Da",
-                      style: TextStyle(color: Colors.grey.shade700),
+                      style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade700),
                     ),
                   ],
                 ),
                 Row(
                   children: <Widget>[
-                    Text("1", style: TextStyle(fontSize: 20)),
+                    Text("1", style: TextStyle(fontFamily: 'Raleway',fontSize: 20)),
                     SizedBox(width: 7),
                     OutlineButton(
+                      borderSide: BorderSide(color: Colors.grey.shade600),
                       onPressed: () {},
                       child: Icon(Icons.remove),
                       shape: RoundedRectangleBorder(
@@ -85,11 +73,13 @@ class _MenuDetailState extends State<MenuDetail> {
                     ),
                     SizedBox(width: 7),
                     OutlineButton(
+                      padding: EdgeInsets.all(0),
                       onPressed: () {},
                       child: Icon(Icons.add),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                               bottomRight: Radius.circular(30), topRight: Radius.circular(30))),
+                      borderSide: BorderSide(color: Colors.grey.shade600),
                     ),
                   ],
                 ),
@@ -106,11 +96,11 @@ class _MenuDetailState extends State<MenuDetail> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: <Widget>[
-                Text("Size", style: TextStyle(color: Colors.grey.shade700)),
+                Text("Size", style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade700)),
                 SizedBox(width: 50),
                 Expanded(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Icon(widget.coffee.coffeeIcon,color: Colors.grey.shade400),
                     SizedBox(width: 50),
@@ -132,18 +122,22 @@ class _MenuDetailState extends State<MenuDetail> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: <Widget>[
-                Text("Sugar", style: TextStyle(color: Colors.grey.shade700)),
+                Text("Sugar", style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade700)),
                 SizedBox(width: 40),
                 Expanded(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Icon(Icons.indeterminate_check_box,color: Colors.grey.shade400),
                         SizedBox(width: 50),
                         Icon(Icons.check_box_outline_blank,color: Colors.grey.shade400),
                         SizedBox(width: 50),
-                        Icon(Icons.check_box_outline_blank,color: Colors.brown.shade800),
-                        Icon(Icons.check_box_outline_blank,color: Colors.brown.shade800),
+                        Row(
+                          children: <Widget>[
+                            Icon(Icons.check_box_outline_blank,color: Colors.brown.shade800),
+                            Icon(Icons.check_box_outline_blank,color: Colors.brown.shade800),
+                          ],
+                        ),
                       ],
                     ))
               ],
@@ -159,7 +153,7 @@ class _MenuDetailState extends State<MenuDetail> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Row(
               children: <Widget>[
-                Text("Additions", style: TextStyle(color: Colors.grey.shade700)),
+                Text("Additions", style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade700)),
                 SizedBox(width: 14),
                 Expanded(
                     child: Row(
@@ -178,8 +172,16 @@ class _MenuDetailState extends State<MenuDetail> {
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Divider(height: 3),
           ),
-          SizedBox(height: 20),
-          Row()
+          SizedBox(height: 30),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text("Total:",style: TextStyle(fontFamily: 'Raleway',color: darkBrown,fontSize: 30)),
+                Text("${widget.coffee.price} Da",style: TextStyle(fontFamily: 'Raleway',color: Colors.brown.shade800,fontSize: 30,fontWeight: FontWeight.bold)),
+            ],),
+          ),
         ],
       ),
     );
