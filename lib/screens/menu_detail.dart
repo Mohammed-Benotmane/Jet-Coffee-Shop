@@ -50,12 +50,12 @@ class _MenuDetailState extends State<MenuDetail> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(widget.coffee.name,
-                        style: TextStyle(fontFamily: 'Raleway',
-                            fontSize: 16, color: Colors.brown.shade800, fontWeight: FontWeight.bold)),
+                        style: TextStyle(letterSpacing: 2,fontFamily: 'Raleway',
+                            fontSize: 20, color: Colors.brown.shade800, fontWeight: FontWeight.bold)),
                     SizedBox(height: 5),
                     Text(
                       "${widget.coffee.price} Da",
-                      style: TextStyle(fontFamily: 'Raleway',color: Colors.grey.shade700),
+                      style: TextStyle(fontSize: 18,fontFamily: 'Raleway',color: Colors.grey.shade700),
                     ),
                   ],
                 ),
@@ -157,11 +157,13 @@ class _MenuDetailState extends State<MenuDetail> {
                 SizedBox(width: 14),
                 Expanded(
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
                         Icon(Icons.cake,color: Colors.grey.shade400),
                         SizedBox(width: 50),
                         Icon(Icons.cloud,color: Colors.grey.shade400),
+                        SizedBox(width: 65),
+                        Icon(Icons.cloud,color: Colors.white),
                       ],
                     ))
               ],
@@ -178,9 +180,26 @@ class _MenuDetailState extends State<MenuDetail> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text("Total:",style: TextStyle(fontFamily: 'Raleway',color: darkBrown,fontSize: 30)),
-                Text("${widget.coffee.price} Da",style: TextStyle(fontFamily: 'Raleway',color: Colors.brown.shade800,fontSize: 30,fontWeight: FontWeight.bold)),
+                Text("Total:",style: TextStyle(fontFamily: 'Raleway',color: darkBrown,fontSize: 28)),
+                Text("${widget.coffee.price} Da",style: TextStyle(fontFamily: 'Raleway',color: Colors.brown.shade800,fontSize: 28,fontWeight: FontWeight.bold)),
             ],),
+          ),
+          SizedBox(height: 30),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              ClipRRect(
+                  borderRadius: BorderRadius.circular(25),
+                  child: FlatButton(
+                    padding: EdgeInsets.fromLTRB(55, 15, 55, 15),
+                    onPressed: () {},
+                    child: Text(
+                      "Add to cart",
+                      style: TextStyle(fontFamily: 'Raleway',color: Colors.white),
+                    ),
+                    color: darkBrown,
+                  )),
+            ],
           ),
         ],
       ),
