@@ -5,7 +5,7 @@
 
 ## Description:
 
-This is the second app of my challenge (One week challenge), It's a Flutter Application of a CoffeeShop.
+JetCoffeeShop is the second app of my One week challenge, It's a Flutter Application of a CoffeeShop that displays available menus with details page of each beverage.
 
 ## ScreenShots:
 
