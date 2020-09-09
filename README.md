@@ -9,12 +9,13 @@ This is the second app of my challenge (One week challenge), It's a Flutter Appl
 
 ## ScreenShots:
 
-<img src="screenshots/home.jpg" width="200" /> <img src="screenshots/detail.jpg" width="200" />
+<img src="screenshots/s1.jpg" width="200" /> <img src="screenshots/s2.jpg" width="200" /> <img src="screenshots/s3.jpg" width="200" /> <img src="screenshots/s4.jpg" width="200" /> <img src="screenshots/s5.jpg" width="200" />
 
 ## Tools & languages:
 * Android studio (IDE)
 * Dart (logic)
 * Flutter (Mobile UI developement kit)
+* Paint.net (Image editor)
 
 ## Contribution:
 Feel free to fork this project and add whatever you like. If you have any suggestions or any comments please feel free to contact me or to open an issue.
@@ -31,4 +32,4 @@ For announcements about new releases and breaking changes, follow the
 mailing list.
 
 ## Special thanks:
-Design inspired by [this](https://www.pinterest.com/pin/412079434656327833/) UI
+Design inspired by [this](https://www.pinterest.com/pin/4714774597826824/) UI
