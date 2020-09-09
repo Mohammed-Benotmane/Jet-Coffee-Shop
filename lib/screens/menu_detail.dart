@@ -2,6 +2,7 @@ import 'package:coffeshopapp/const.dart';
 import 'package:coffeshopapp/icons/my_flutter_app_icons.dart';
 import 'package:coffeshopapp/models/coffee.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class MenuDetail extends StatefulWidget {
   Coffee coffee;
@@ -61,8 +62,8 @@ class _MenuDetailState extends State<MenuDetail> {
                 ),
                 Row(
                   children: <Widget>[
-                    Text("1", style: TextStyle(fontFamily: 'Raleway',fontSize: 20)),
-                    SizedBox(width: 7),
+                    Text("1", style: TextStyle(color: Colors.brown.shade800,fontFamily: 'Raleway',fontSize: 26)),
+                    SizedBox(width: 20),
                     OutlineButton(
                       borderSide: BorderSide(color: Colors.grey.shade600),
                       onPressed: () {},
@@ -161,7 +162,7 @@ class _MenuDetailState extends State<MenuDetail> {
                       children: <Widget>[
                         Icon(Icons.cake,color: Colors.grey.shade400),
                         SizedBox(width: 50),
-                        Icon(Icons.cloud,color: Colors.grey.shade400),
+                        Icon(FontAwesomeIcons.iceCream,color: Colors.grey.shade400),
                         SizedBox(width: 65),
                         Icon(Icons.cloud,color: Colors.white),
                       ],
@@ -184,22 +185,25 @@ class _MenuDetailState extends State<MenuDetail> {
                 Text("${widget.coffee.price} Da",style: TextStyle(fontFamily: 'Raleway',color: Colors.brown.shade800,fontSize: 28,fontWeight: FontWeight.bold)),
             ],),
           ),
-          SizedBox(height: 30),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: <Widget>[
-              ClipRRect(
-                  borderRadius: BorderRadius.circular(25),
-                  child: FlatButton(
-                    padding: EdgeInsets.fromLTRB(55, 15, 55, 15),
-                    onPressed: () {},
-                    child: Text(
-                      "Add to cart",
-                      style: TextStyle(fontFamily: 'Raleway',color: Colors.white),
-                    ),
-                    color: darkBrown,
-                  )),
-            ],
+          SizedBox(height: 60),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: <Widget>[
+                ClipRRect(
+                    borderRadius: BorderRadius.circular(25),
+                    child: FlatButton(
+                      padding: EdgeInsets.fromLTRB(55, 15, 55, 15),
+                      onPressed: () {},
+                      child: Text(
+                        "Add to cart",
+                        style: TextStyle(fontFamily: 'Raleway',color: Colors.white),
+                      ),
+                      color: darkBrown,
+                    )),
+              ],
+            ),
           ),
         ],
       ),
