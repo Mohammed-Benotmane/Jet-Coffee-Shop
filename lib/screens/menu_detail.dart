@@ -129,7 +129,7 @@ class _MenuDetailState extends State<MenuDetail> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: <Widget>[
-                        Icon(Icons.indeterminate_check_box,color: Colors.grey.shade400),
+                        Icon(Icons.close,color: Colors.grey.shade400),
                         SizedBox(width: 50),
                         Icon(Icons.check_box_outline_blank,color: Colors.grey.shade400),
                         SizedBox(width: 50),
