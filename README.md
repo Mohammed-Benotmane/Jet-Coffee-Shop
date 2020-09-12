@@ -11,6 +11,11 @@ JetCoffeeShop is the second app of my One week challenge, It's a Flutter Applica
 
 <img src="screenshots/s1.jpg" width="200" /> <img src="screenshots/s2.jpg" width="200" /> <img src="screenshots/s3.jpg" width="200" /> <img src="screenshots/s4.jpg" width="200" /> <img src="screenshots/s5.jpg" width="200" />
 
+## Challenge:
+* [Day 1: JetHotels](https://github.com/Mohammed-Benotmane/Jet-Hotels)
+* [Day 2: JetCoffeeShop](https://github.com/Mohammed-Benotmane/Jet-Coffee-Shop)
+* [Day 3: JetArt](https://github.com/Mohammed-Benotmane/Jet-Art)
+
 ## Tools & languages:
 * Android studio (IDE)
 * Dart (logic)
